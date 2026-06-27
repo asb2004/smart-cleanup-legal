@@ -1,92 +1,101 @@
-# Privacy Policy
+Privacy Policy
 
-**Last updated:** February 2026
+Last updated: June 2026
 
 Smart Cleanup – Storage Saver respects your privacy. This Privacy Policy explains how your information is handled when you use the app.
 
----
+⸻
 
-## 1. Data Collection
+1. Data Collection
 
-Smart Cleanup does **not collect, store, or upload** your photos or videos to any external server.
+Smart Cleanup does not collect, store, or upload your photos or videos to any external server.
 
-All media analysis — including duplicate detection, similar photo detection, and video compression — is performed **entirely on your device**.
+All media analysis — including duplicate detection, similar photo detection, image compression, image resizing, and video compression — is performed entirely on your device.
 
----
+⸻
 
-## 2. Photo Library Access
+2. Photo Library Access
 
 The app requires access to your photo library to:
-- Analyze media files
-- Identify duplicate and similar photos
-- Allow users to delete or manage media
 
-This access is used **only for app functionality** and **never for tracking or sharing purposes**.
+* Analyze media files
+* Identify duplicate and similar photos
+* Compress and resize images
+* Compress videos
+* Allow users to delete or manage media
 
----
+This access is used only for app functionality and never to access or upload your personal media files.
 
-## 3. Advertising
+⸻
 
-Smart Cleanup uses **Google AdMob** to display advertisements.
+3. Advertising
 
-AdMob may collect limited device information such as:
-- Advertising identifiers
-- Device information
-- Usage and performance data
+Smart Cleanup uses Google AdMob to display advertisements.
 
-This data is used only for ad delivery, analytics, and fraud prevention.  
-You can manage ad personalization in your device settings.
+With your permission, AdMob may collect limited information such as:
 
----
+* Advertising identifiers (IDFA)
+* Device information
+* Usage data
+* Performance data
 
-## 4. Analytics & Crash Reporting
+This information may be used to provide personalized or non-personalized advertisements, measure ad performance, and prevent fraud.
 
-Smart Cleanup uses Google Firebase Analytics and Firebase Crashlytics to help improve the app.
+You can change your tracking preference at any time from Settings → Privacy & Security → Tracking on your device.
 
-These services may automatically collect limited information such as:
+⸻
+
+4. Analytics & Crash Reporting
+
+Smart Cleanup uses Google Firebase Analytics and Firebase Crashlytics to improve the app.
+
+These services may automatically collect anonymous information such as:
 
 * App interactions and feature usage
-* Device model and operating system version
+* Device model
+* Operating system version
 * App version
-* Crash reports and diagnostics
-* Performance information
+* Crash reports
+* Diagnostics and performance information
 
-This information is used solely to improve app stability, identify bugs, understand feature usage, and enhance the overall user experience.
+This information helps us improve app stability, fix bugs, and enhance the overall user experience.
 
-Firebase Analytics and Crashlytics do not collect or upload your photos, videos, or personal media files.
+Firebase Analytics and Crashlytics never collect or upload your photos, videos, or other personal media files.
 
----
+⸻
 
-## 5. In-App Purchases
+5. In-App Purchases
 
-Subscriptions and purchases are handled securely by **Apple App Store In-App Purchases**.
+Subscriptions are securely processed by Apple App Store In-App Purchases.
 
-Smart Cleanup does **not have access** to your payment details or billing information.
+Smart Cleanup never receives or stores your payment card or billing information.
 
----
+⸻
 
-## 6. Data Security
+6. Data Security
 
-Smart Cleanup does **not transmit or store personal data** on external servers.  
-All processing remains local to your device.
+Your photos and videos remain on your device at all times.
 
----
+Smart Cleanup does not upload, store, or process your media on external servers.
 
-## 7. Children’s Privacy
+Only anonymous analytics, diagnostics, and advertising-related information may be transmitted securely to trusted third-party services such as Google Firebase and Google AdMob.
 
-Smart Cleanup is **not intended for children under the age of 13** and does not knowingly collect personal data from children.
+⸻
 
----
+7. Children’s Privacy
 
-## 8. Policy Updates
+Smart Cleanup is not intended for children under the age of 13 and does not knowingly collect personal information from children.
 
-This Privacy Policy may be updated from time to time.  
-Any changes will be reflected on this page.
+⸻
 
----
+8. Changes to This Policy
 
-## 9. Contact
+We may update this Privacy Policy from time to time. Any changes will be posted on this page with the updated revision date.
 
-If you have any questions, contact us at:
+⸻
 
-📧 **ideveloper2024@gmail.com**
+9. Contact
+
+If you have any questions about this Privacy Policy, please contact:
+
+📧 ideveloper2024@gmail.com
