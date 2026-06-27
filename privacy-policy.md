@@ -39,7 +39,25 @@ You can manage ad personalization in your device settings.
 
 ---
 
-## 4. In-App Purchases
+## 4. Analytics & Crash Reporting
+
+Smart Cleanup uses Google Firebase Analytics and Firebase Crashlytics to help improve the app.
+
+These services may automatically collect limited information such as:
+
+* App interactions and feature usage
+* Device model and operating system version
+* App version
+* Crash reports and diagnostics
+* Performance information
+
+This information is used solely to improve app stability, identify bugs, understand feature usage, and enhance the overall user experience.
+
+Firebase Analytics and Crashlytics do not collect or upload your photos, videos, or personal media files.
+
+---
+
+## 5. In-App Purchases
 
 Subscriptions and purchases are handled securely by **Apple App Store In-App Purchases**.
 
@@ -47,27 +65,27 @@ Smart Cleanup does **not have access** to your payment details or billing inform
 
 ---
 
-## 5. Data Security
+## 6. Data Security
 
 Smart Cleanup does **not transmit or store personal data** on external servers.  
 All processing remains local to your device.
 
 ---
 
-## 6. Children’s Privacy
+## 7. Children’s Privacy
 
 Smart Cleanup is **not intended for children under the age of 13** and does not knowingly collect personal data from children.
 
 ---
 
-## 7. Policy Updates
+## 8. Policy Updates
 
 This Privacy Policy may be updated from time to time.  
 Any changes will be reflected on this page.
 
 ---
 
-## 8. Contact
+## 9. Contact
 
 If you have any questions, contact us at:
 
