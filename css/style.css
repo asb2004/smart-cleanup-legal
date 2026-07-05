@@ -1,0 +1,837 @@
+/* ============================================================
+   Smart Cleanup — Stylesheet
+   Apple Human Interface inspired.
+   Table of contents:
+     1. Design tokens (variables)
+     2. Base / reset
+     3. Layout helpers
+     4. Buttons & badges
+     5. Header / navigation
+     6. Hero
+     7. Sections & headings
+     8. About
+     9. Feature cards
+    10. Timeline (How it works)
+    11. Benefits
+    12. Hero logo showcase
+    13. Call to action
+    14. Footer
+    15. Legal pages
+    16. Animations (reveal on scroll)
+    17. Responsive breakpoints
+   ============================================================ */
+
+/* ---------- 1. DESIGN TOKENS ---------- */
+:root {
+  --bg: #ffffff;
+  --bg-muted: #f5f5f7;
+  --text: #1d1d1f;
+  --text-secondary: #6e6e73;
+  --primary: #007aff;
+  --primary-dark: #0062cc;
+  --border: #e5e5ea;
+
+  --radius-sm: 10px;
+  --radius: 18px;
+  --radius-lg: 28px;
+
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 20px 60px rgba(0, 0, 0, 0.12);
+
+  --container: 1120px;
+  --gap: 24px;
+
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---------- 2. BASE / RESET ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s var(--ease), opacity 0.2s var(--ease);
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(0, 122, 255, 0.5);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* ---------- 3. LAYOUT HELPERS ---------- */
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap);
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ---------- 4. BUTTONS & BADGES ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 14px 26px;
+  border-radius: 980px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s var(--ease), background 0.2s var(--ease),
+    box-shadow 0.2s var(--ease);
+  white-space: nowrap;
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0, 122, 255, 0.25);
+}
+
+.btn--primary:hover {
+  background: var(--primary-dark);
+  opacity: 1;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0, 122, 255, 0.32);
+}
+
+.btn--sm {
+  font-size: 15px;
+  padding: 10px 18px;
+}
+
+.btn--lg {
+  font-size: 19px;
+  padding: 17px 34px;
+}
+
+/* App Store badge placeholder */
+.appstore-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 18px;
+  border-radius: 12px;
+  background: #000;
+  color: #fff;
+}
+
+.appstore-badge:hover {
+  opacity: 0.9;
+}
+
+.appstore-badge__icon {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.365 1.43c0 1.14-.42 2.2-1.12 3-0.77 0.9-2.03 1.6-3.06 1.52-0.13-1.1 0.42-2.27 1.09-3.02 0.75-0.85 2.07-1.5 3.09-1.5zm3.4 16.2c-0.56 1.28-0.83 1.85-1.55 2.98-1 1.58-2.4 3.55-4.15 3.56-1.55 0.02-1.95-1.01-4.06-1-2.11 0.01-2.55 1.02-4.1 1.01-1.75-0.02-3.08-1.79-4.08-3.37-2.8-4.42-3.1-9.61-1.37-12.37 1.23-1.96 3.17-3.11 5-3.11 1.86 0 3.03 1.02 4.57 1.02 1.49 0 2.4-1.02 4.55-1.02 1.63 0 3.36 0.89 4.59 2.42-4.03 2.21-3.37 7.96 0.6 9.87z'/></svg>") center / contain no-repeat;
+  mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path d='M16.365 1.43c0 1.14-.42 2.2-1.12 3-0.77 0.9-2.03 1.6-3.06 1.52-0.13-1.1 0.42-2.27 1.09-3.02 0.75-0.85 2.07-1.5 3.09-1.5zm3.4 16.2c-0.56 1.28-0.83 1.85-1.55 2.98-1 1.58-2.4 3.55-4.15 3.56-1.55 0.02-1.95-1.01-4.06-1-2.11 0.01-2.55 1.02-4.1 1.01-1.75-0.02-3.08-1.79-4.08-3.37-2.8-4.42-3.1-9.61-1.37-12.37 1.23-1.96 3.17-3.11 5-3.11 1.86 0 3.03 1.02 4.57 1.02 1.49 0 2.4-1.02 4.55-1.02 1.63 0 3.36 0.89 4.59 2.42-4.03 2.21-3.37 7.96 0.6 9.87z'/></svg>") center / contain no-repeat;
+  flex-shrink: 0;
+}
+
+.appstore-badge__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  text-align: left;
+}
+
+.appstore-badge__text small {
+  font-size: 10px;
+  opacity: 0.85;
+}
+
+.appstore-badge__text strong {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+/* ---------- 5. HEADER / NAVIGATION ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+}
+
+.nav__brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.nav__brand:hover {
+  opacity: 1;
+}
+
+.nav__logo {
+  border-radius: 7px;
+}
+
+.nav__menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav__menu a {
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav__menu .btn--primary {
+  color: #fff;
+}
+
+.nav__toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+
+.nav__toggle span {
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+
+.nav__toggle.is-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav__toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.nav__toggle.is-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---------- 6. HERO ---------- */
+.hero {
+  padding: 88px 0 72px;
+  background: radial-gradient(
+    ellipse at top,
+    #f5f8ff 0%,
+    var(--bg) 55%
+  );
+  overflow: hidden;
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.hero__icon {
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+  margin-bottom: 24px;
+}
+
+.hero__title {
+  font-size: clamp(44px, 7vw, 76px);
+  letter-spacing: -0.03em;
+}
+
+.hero__subtitle {
+  margin-top: 20px;
+  font-size: clamp(18px, 2.4vw, 22px);
+  color: var(--text-secondary);
+  max-width: 520px;
+}
+
+.hero__actions {
+  margin-top: 34px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- 7. SECTIONS & HEADINGS ---------- */
+.section {
+  padding: 96px 0;
+}
+
+.section--muted {
+  background: var(--bg-muted);
+}
+
+.section__head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 56px;
+}
+
+.section__title {
+  font-size: clamp(30px, 4.5vw, 46px);
+}
+
+.section__subtitle {
+  margin-top: 16px;
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--text-secondary);
+}
+
+/* ---------- 8. ABOUT ---------- */
+.about__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about__list li {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 18px 20px;
+  font-weight: 500;
+  font-size: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease);
+}
+
+.about__list li:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- 9. FEATURE CARDS ---------- */
+.card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow);
+}
+
+.card__icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 122, 255, 0.1);
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.card__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.card__text {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* ---------- 10. TIMELINE (HOW IT WORKS) ---------- */
+.timeline {
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline__step {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 40px;
+  position: relative;
+}
+
+/* Connecting line */
+.timeline__step:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 56px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(var(--primary), rgba(0, 122, 255, 0.2));
+}
+
+.timeline__step:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__num {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0, 122, 255, 0.3);
+  z-index: 1;
+}
+
+.timeline__body {
+  padding-top: 6px;
+}
+
+.timeline__title {
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.timeline__text {
+  color: var(--text-secondary);
+}
+
+/* ---------- 11. BENEFITS ---------- */
+.benefit {
+  background: var(--bg-muted);
+  border-radius: var(--radius);
+  padding: 30px 28px;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.benefit:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+}
+
+.benefit__title {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.benefit__title::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--primary);
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.benefit__text {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+/* ---------- 12. HERO LOGO SHOWCASE ---------- */
+.logo-showcase {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Soft glow behind the app icon */
+.logo-showcase::before {
+  content: "";
+  position: absolute;
+  width: 78%;
+  height: 78%;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 122, 255, 0.35) 0%,
+    rgba(0, 122, 255, 0) 70%
+  );
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.logo-showcase__icon {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 26%;
+  box-shadow: var(--shadow-lg);
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+/* ---------- 13. CALL TO ACTION ---------- */
+.cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #007aff, #4aa3ff);
+  color: #fff;
+  text-align: center;
+}
+
+.cta__inner {
+  max-width: 640px;
+}
+
+.cta__title {
+  font-size: clamp(30px, 4.5vw, 46px);
+}
+
+.cta__text {
+  margin: 18px auto 34px;
+  font-size: clamp(17px, 2vw, 20px);
+  opacity: 0.92;
+}
+
+.cta .btn--primary {
+  background: #fff;
+  color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cta .btn--primary:hover {
+  background: #f0f0f3;
+}
+
+/* ---------- 14. FOOTER ---------- */
+.footer {
+  background: var(--bg-muted);
+  padding: 64px 0 28px;
+  color: var(--text-secondary);
+}
+
+.footer__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--border);
+}
+
+.footer__title {
+  color: var(--text);
+  font-size: 22px;
+}
+
+.footer__tagline {
+  margin-top: 6px;
+  font-size: 15px;
+}
+
+.footer__heading {
+  color: var(--text);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+.footer__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer__nav a {
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.footer__nav a:hover {
+  color: var(--primary);
+}
+
+.footer__cta {
+  display: flex;
+  align-items: flex-start;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding-top: 24px;
+  font-size: 14px;
+}
+
+/* ---------- 15. LEGAL PAGES ---------- */
+.legal {
+  padding: 72px 0 96px;
+}
+
+.legal__inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.legal__title {
+  font-size: clamp(32px, 5vw, 48px);
+  margin-bottom: 8px;
+}
+
+.legal__updated {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.legal h2 {
+  font-size: 24px;
+  margin: 36px 0 12px;
+}
+
+.legal p,
+.legal li {
+  color: var(--text-secondary);
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.legal ul {
+  list-style: disc;
+  padding-left: 24px;
+}
+
+.legal a {
+  font-weight: 500;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 32px;
+  font-weight: 500;
+}
+
+/* ---------- 16. ANIMATIONS (reveal on scroll) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .logo-showcase__icon {
+    animation: none;
+  }
+}
+
+/* ---------- 17. RESPONSIVE BREAKPOINTS ---------- */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    padding: 64px 0 56px;
+  }
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+  .hero__icon {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero__actions {
+    justify-content: center;
+  }
+  .hero__visual {
+    order: -1;
+  }
+
+  .grid--3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .about__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .logo-showcase__icon {
+    max-width: 240px;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__cta {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Mobile */
+@media (max-width: 620px) {
+  body {
+    font-size: 16px;
+  }
+  .section {
+    padding: 64px 0;
+  }
+
+  /* Collapsible mobile menu */
+  .nav__toggle {
+    display: flex;
+  }
+  .nav__menu {
+    position: absolute;
+    top: 56px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 24px 20px;
+    transform: translateY(-12px);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
+  }
+  .nav__menu.is-open {
+    transform: none;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .nav__menu li {
+    padding: 6px 0;
+  }
+  .nav__menu .btn--primary {
+    width: 100%;
+    margin-top: 6px;
+  }
+
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+  .about__list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer__grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .footer__nav ul {
+    align-items: center;
+  }
+  .footer__cta {
+    justify-content: center;
+  }
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero__actions .btn,
+  .hero__actions .appstore-badge {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,325 @@
+<!--
+  Smart Cleanup — Landing Page
+  Apple Human Interface inspired product page.
+  Built with HTML5, CSS3, and Vanilla JavaScript only. No frameworks.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- ============================================================
+       META / SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Smart Cleanup — Clean Your iPhone Smarter</title>
+  <meta name="description" content="Smart Cleanup helps you remove duplicate photos, clean similar images and screenshots, and free up iPhone storage in just a few taps. Privacy-first and fast." />
+  <meta name="keywords" content="Smart Cleanup, iPhone cleaner, duplicate photo cleaner, similar image detection, screenshot cleaner, storage optimizer, free up space, iOS cleanup app" />
+  <meta name="author" content="Smart Cleanup" />
+  <meta name="theme-color" content="#FFFFFF" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Smart Cleanup — Clean Your iPhone Smarter" />
+  <meta property="og:description" content="Remove duplicate photos, organize storage, and free up space in just a few taps." />
+  <meta property="og:image" content="assets/icons/app-icon.jpg" />
+  <meta property="og:url" content="https://apps.apple.com/app/id6758055419" />
+  <meta property="og:site_name" content="Smart Cleanup" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Smart Cleanup — Clean Your iPhone Smarter" />
+  <meta name="twitter:description" content="Remove duplicate photos, organize storage, and free up space in just a few taps." />
+  <meta name="twitter:image" content="assets/icons/app-icon.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/icons/favicon.jpg" />
+  <link rel="apple-touch-icon" href="assets/icons/favicon.jpg" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- ============================================================
+       HEADER / NAVIGATION
+  ============================================================ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a href="#top" class="nav__brand" aria-label="Smart Cleanup home">
+        <img src="assets/icons/app-icon.jpg" alt="Smart Cleanup app icon" class="nav__logo" width="28" height="28" />
+        <span>Smart Cleanup</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__menu" id="navMenu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#how">How It Works</a></li>
+        <li><a href="#why">Why Smart Cleanup</a></li>
+        <li>
+          <a class="btn btn--primary btn--sm" href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener">Download</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         1. HERO SECTION
+    ============================================================ -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <!-- App icon -->
+          <img src="assets/icons/app-icon.jpg" alt="Smart Cleanup app icon" class="hero__icon" width="96" height="96" />
+
+          <h1 class="hero__title" id="hero-title">Smart Cleanup</h1>
+          <p class="hero__subtitle">
+            Clean your iPhone smarter.<br />
+            Remove duplicate photos, organize storage, and free up space in just a few taps.
+          </p>
+
+          <div class="hero__actions">
+            <!-- Primary download button -->
+            <a class="btn btn--primary" href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener">
+              Download on the App Store
+            </a>
+
+            <!-- Small App Store badge placeholder -->
+            <a class="appstore-badge" href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener" aria-label="Download on the App Store">
+              <span class="appstore-badge__icon" aria-hidden="true"></span>
+              <span class="appstore-badge__text">
+                <small>Download on the</small>
+                <strong>App Store</strong>
+              </span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero visual: app logo showcase -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="logo-showcase">
+            <img src="assets/icons/app-icon.jpg" alt="" class="logo-showcase__icon" width="300" height="300" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2. ABOUT
+    ============================================================ -->
+    <section class="section section--muted" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="about-title">A cleaner iPhone, made simple</h2>
+          <p class="section__subtitle">
+            Smart Cleanup scans your photo library and clears the clutter — safely, quickly, and privately.
+          </p>
+        </header>
+
+        <ul class="about__list reveal">
+          <li>Smart storage cleaning</li>
+          <li>Duplicate photo detection</li>
+          <li>Similar image cleanup</li>
+          <li>Screenshot cleanup</li>
+          <li>Storage optimization</li>
+          <li>Fast scanning</li>
+          <li>Simple interface</li>
+          <li>Privacy-first experience</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         3. FEATURES
+    ============================================================ -->
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="features-title">Everything you need to clean up</h2>
+          <p class="section__subtitle">Powerful tools that keep your photo library tidy.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <!-- Feature card -->
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M4 16V6a2 2 0 0 1 2-2h10"/></svg>
+            </div>
+            <h3 class="card__title">Duplicate Photo Cleaner</h3>
+            <p class="card__text">Instantly find and remove exact duplicate photos taking up space.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="14" height="14" rx="2"/><path d="M7 21h10a2 2 0 0 0 2-2V9"/></svg>
+            </div>
+            <h3 class="card__title">Similar Image Detection</h3>
+            <p class="card__text">Spot near-identical shots and keep only the best one from each set.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M9 6h6"/></svg>
+            </div>
+            <h3 class="card__title">Screenshot Cleaner</h3>
+            <p class="card__text">Clear out old screenshots you no longer need in a single sweep.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+            </div>
+            <h3 class="card__title">Storage Analyzer</h3>
+            <p class="card__text">See exactly what's using your space and where you can save the most.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
+            </div>
+            <h3 class="card__title">Fast Scan</h3>
+            <p class="card__text">Scan thousands of photos in seconds with an optimized engine.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5z"/></svg>
+            </div>
+            <h3 class="card__title">Privacy First</h3>
+            <p class="card__text">Everything runs on your device. Your photos never leave your iPhone.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         4. HOW IT WORKS
+    ============================================================ -->
+    <section class="section section--muted" id="how" aria-labelledby="how-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="how-title">How it works</h2>
+          <p class="section__subtitle">Three simple steps to a cleaner library.</p>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline__step reveal">
+            <div class="timeline__num">1</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Scan your Photos Library</h3>
+              <p class="timeline__text">Smart Cleanup safely analyzes your photos to find clutter.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <div class="timeline__num">2</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Review Suggested Files</h3>
+              <p class="timeline__text">Look through duplicates, similar shots, and screenshots.</p>
+            </div>
+          </li>
+          <li class="timeline__step reveal">
+            <div class="timeline__num">3</div>
+            <div class="timeline__body">
+              <h3 class="timeline__title">Delete Unwanted Items</h3>
+              <p class="timeline__text">Remove what you don't need and reclaim your storage.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5. WHY SMART CLEANUP
+    ============================================================ -->
+    <section class="section" id="why" aria-labelledby="why-title">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title" id="why-title">Why Smart Cleanup</h2>
+          <p class="section__subtitle">Built to keep your iPhone fast, clean, and organized.</p>
+        </header>
+
+        <div class="grid grid--3">
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Free Up Storage</h3>
+            <p class="benefit__text">Reclaim gigabytes by clearing duplicates and clutter.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Fast Performance</h3>
+            <p class="benefit__text">A lightweight engine that scans quickly and smoothly.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Easy to Use</h3>
+            <p class="benefit__text">A clean, intuitive interface anyone can navigate.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Safe Cleaning</h3>
+            <p class="benefit__text">You review and confirm before anything is deleted.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Privacy Focused</h3>
+            <p class="benefit__text">On-device processing keeps your photos private.</p>
+          </article>
+          <article class="benefit reveal">
+            <h3 class="benefit__title">Optimized for iPhone</h3>
+            <p class="benefit__text">Designed to feel right at home on iOS.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         7. CALL TO ACTION
+    ============================================================ -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container cta__inner reveal">
+        <h2 class="cta__title" id="cta-title">Ready to Clean Your iPhone?</h2>
+        <p class="cta__text">
+          Download Smart Cleanup today and enjoy a cleaner, more organized photo library.
+        </p>
+        <a class="btn btn--primary btn--lg" href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener">
+          Download on the App Store
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       8. FOOTER
+  ============================================================ -->
+  <footer class="footer" aria-labelledby="footer-title">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <h2 class="footer__title" id="footer-title">Smart Cleanup</h2>
+        <p class="footer__tagline">Clean your iPhone smarter.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms-of-service.html">Terms of Service</a></li>
+          <li><a href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener">Download on App Store</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer__cta">
+        <a class="btn btn--primary btn--sm" href="https://apps.apple.com/app/id6758055419" target="_blank" rel="noopener">
+          Download on the App Store
+        </a>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="year">2026</span> Smart Cleanup. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/script.js"></script>
+</body>
+</html>
