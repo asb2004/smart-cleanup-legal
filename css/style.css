@@ -733,9 +733,10 @@ h3 {
     text-align: center;
     gap: 40px;
   }
+  /* The big logo showcase already sits on top when stacked,
+     so hide the small hero icon to avoid showing the logo twice. */
   .hero__icon {
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
   }
   .hero__subtitle {
     margin-left: auto;
