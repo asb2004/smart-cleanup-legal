@@ -1,0 +1,7 @@
+# Smart Cleanup — robots.txt
+# Allow all crawlers to index the entire site.
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://asb2004.github.io/smart-cleanup-legal/sitemap.xml

@@ -551,6 +551,65 @@ h3 {
   50% { transform: translateY(-14px); }
 }
 
+/* ---------- 12b. FAQ (accordion) ---------- */
+.faq {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.faq__item {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 22px;
+  margin-bottom: 14px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s var(--ease);
+}
+
+.faq__item[open] {
+  box-shadow: var(--shadow);
+}
+
+.faq__q {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  padding: 16px 30px 16px 0;
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+}
+
+/* Hide default marker */
+.faq__q::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom +/- indicator */
+.faq__q::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--primary);
+  transition: transform 0.2s var(--ease);
+}
+
+.faq__item[open] .faq__q::after {
+  content: "−";
+}
+
+.faq__a {
+  color: var(--text-secondary);
+  font-size: 16px;
+  padding: 0 0 18px;
+  margin: 0;
+}
+
 /* ---------- 13. CALL TO ACTION ---------- */
 .cta {
   padding: 100px 0;
@@ -668,11 +727,23 @@ h3 {
   margin: 36px 0 12px;
 }
 
+.legal h3 {
+  font-size: 19px;
+  color: var(--text);
+  margin: 24px 0 8px;
+}
+
 .legal p,
 .legal li {
   color: var(--text-secondary);
   font-size: 17px;
   margin-bottom: 12px;
+}
+
+/* Inline CTA button inside legal/support content keeps its own colors */
+.legal .btn {
+  color: #fff;
+  margin-top: 8px;
 }
 
 .legal ul {

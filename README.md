@@ -13,12 +13,17 @@ App Store: <https://apps.apple.com/app/id6758055419>
 ```
 .
 ├── index.html               # Landing page
+├── support.html             # Support / Help Center
 ├── privacy-policy.html      # Privacy Policy (web version)
 ├── terms-of-service.html    # Terms & Conditions (web version)
 │
 ├── privacy-policy.md        # Privacy Policy (source, used in-app)
 ├── terms-of-service.md      # Terms & Conditions (source, used in-app)
 ├── app-ads.txt              # AdMob authorized sellers
+│
+├── sitemap.xml              # SEO sitemap for search engines
+├── robots.txt               # Crawler rules + sitemap pointer
+├── google81ea07902f87482c.html  # Google Search Console verification
 │
 ├── css/style.css            # All styles (organized by section)
 ├── js/script.js             # Mobile nav, scroll reveal, footer year
@@ -30,6 +35,19 @@ App Store: <https://apps.apple.com/app/id6758055419>
 │
 └── README.md
 ```
+
+## 🔎 SEO
+
+- Unique `<title>`, meta description, and keywords per page
+- Canonical URLs, Open Graph, and Twitter Card tags
+- JSON-LD structured data: `SoftwareApplication` + `FAQPage` (rich results)
+- `sitemap.xml` and `robots.txt` for crawlers
+- Google Search Console verified via `google81ea07902f87482c.html`
+- Semantic HTML, accessible landmarks, and an on-page FAQ
+
+**After deploy:** in [Google Search Console](https://search.google.com/search-console),
+add the property `https://asb2004.github.io/smart-cleanup-legal/`, confirm verification,
+then submit `sitemap.xml`.
 
 > The `.md` files are the source of truth referenced inside the app and are kept as-is.
 > The `.html` versions mirror the same content for the public website.
